@@ -6,4 +6,15 @@ $('#header .menu >li').on("click", function(){
    $(this).addClass("on")
    $(this).siblings().removeClass("on")
    $(this).find('.submenu').stop().toggle(400)
+   $(this).siblings('.closeBtn').css({
+      opacity:"1"
+   })
+})
+
+$('.closeBtn').on("click", function(){
+   $(this).addClass("on")
+})
+
+$('.closeBtn').on("unclick", function(){
+   $(this).removeClass("on")
 })

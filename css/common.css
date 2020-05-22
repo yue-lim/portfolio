@@ -260,12 +260,16 @@ body {
   border-radius: 10px;
   transform: rotate(45deg);
   position: absolute;
-  top: 120px;
-  left: 38vw;
+  top: 80px;
+  left: 0;
 }
 
 .closeBtn span:nth-child(2) {
   transform: rotate(-45deg);
+}
+
+.closeBtn.on .submenu.on {
+  display: none;
 }
 
 /*slide 시작*/
