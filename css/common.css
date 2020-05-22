@@ -1,88 +1,7 @@
 @charset "utf-8";
 
 /* reset element */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-button,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -190,6 +109,10 @@ legend {
   display: none
 }
 
+fieldset {
+  border: none
+}
+
 /* 자식들이 float 속성을 가질때 부모의 높이가 무너지므로 .cf로 해결함 */
 .cf:after,
 .cf:before {
@@ -209,4 +132,300 @@ body {
     margin: 0 auto;
   }
 
-  
+#wrap {
+  position: relative;
+}
+
+#header {
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  position: fixed;
+  height: 110px;
+  width: 100%;
+  top:0;
+  left: 0;
+}
+
+.header_nav {
+  width: 1210px;
+  margin: 0 auto;
+}
+
+.logo {
+  position: relative;
+  width: 212px;
+  float: left;
+}
+
+.logo a{
+  display: block;
+  padding:15px 0
+}
+
+.logo img {
+  width: 212px;
+}
+
+.utils {
+  float: right;
+  width: 45%;
+  height: 118px;
+  text-align: right;
+}
+
+.utils li {
+  display: inline-block;
+  margin: 30px 20px
+}
+
+.utils li a {
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: bold;
+  display: block;
+  padding: 5px 2px
+}
+
+.menu {
+  float: left;
+}
+
+.menu >li {
+  font-weight: bold;
+  position: relative;
+  top:60px;
+  left:25px;
+  display: inline-block;
+  margin-right: 10px;
+  transition: all 0.5s;
+}
+
+.menu >li.on {
+  height: 25px;
+  background: #fff;
+  color: #000;
+}
+
+.submenu {
+  width: 40vw;
+  height: 100%;
+  background: #fff;
+  display: none;
+  padding: 289px 200px;
+  font-size: 16px;
+  line-height: 16px;
+  position: fixed;
+  top: 110px;
+  left:0;
+  color: #000;
+}
+
+.submenu >li {
+  padding: 10px 0;
+} 
+
+.submenu h5 {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.submenu h5:nth-of-type(2) {
+  padding-top: 20px;
+}
+
+/*클로즈버튼 시작*/
+.menu >li.on .closeBtn {
+  display: block;
+  position: absolute;
+  top: 100px; 
+  left: 150px;
+  width: 25px;
+  height: 17px;
+}
+
+.closeBtn a {
+  display: block;
+}
+
+.closeBtn span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 10px;
+  transform: rotate(45deg);
+  position: absolute;
+  top:0; left: 0;
+}
+
+.closeBtn span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+/*slide 시작*/
+
+.slide {
+  width: 100%;
+  background: #e53a40;
+}
+
+.slide a {
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  height: 520px;
+  background: url(../img/hero_v9_01.jpg) no-repeat;
+  background-size: cover;
+}
+
+.quick_rowbar {
+  background: #000;
+  color: #fff;
+  font-weight:bold;
+}
+
+.quick_class {
+  margin: 0 auto;
+}
+
+.qc_column {
+  display: inline-block;
+  margin-left: 120px;
+}
+
+.qc_column a {
+  display: block;
+  padding: 20px 0;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.inner_column h3 {
+  padding: 50px 0 35px;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  text-indent: 14px;
+}
+
+.pop_list_box {
+  padding-bottom: 100px;
+}
+
+.pop_list li{
+  float: left;
+  width: 30%;
+  margin-left: 3%;
+  box-shadow: 0px 0px 16px  #ddd;
+  height: 287px;
+  margin-bottom: 22px;
+}
+
+.pop_list img {
+  width: 100%;
+  box-shadow: -3px -3px 16px  #ddd;
+}
+
+.pop_list h4 {
+  padding: 20px 15px 15px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.pop_list p {
+  padding: 0 15px 17px;
+  font-size: 14px;
+  color: #e84242;
+}
+
+.test_imgBox {
+  border-radius: 30px;
+  width: 1020px;
+  height: 300px;
+  overflow: hidden;
+  box-shadow: 0px 0px 16px  #ddd;
+  margin: 0 50px;
+}
+
+.test_imgBox a {
+  display: block;
+}
+
+
+
+
+/*footer 시작*/
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 100px;
+}
+
+.footer_area >div {
+  float: left;
+  width: 30%;
+  margin-left: 3%;
+  padding: 30px 0;
+}
+
+.footer_area h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.footer_area h3:last-child {
+  padding-top: 40px;
+}
+
+.footer_area p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.footer_right li {
+  display: inline-block;
+  padding: 20px 30px;
+}
+
+.footer_right img {
+  width: 45px;
+}
+
+.footer_right p {
+  padding: 15px;
+}
+
+.footer_cpy {
+  font-weight: bold;
+  text-align: center;
+  padding: 50px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
