@@ -137,7 +137,7 @@ body {
 }
 
 #header {
-  background: rgba(0,0,0,0.5);
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0) );
   color: #fff;
   position: fixed;
   height: 110px;
@@ -188,7 +188,6 @@ body {
 
 .menu {
   float: left;
-  transition: all 0.5s;
 }
 
 .menu >li {
@@ -257,7 +256,8 @@ body {
   border-radius: 10px;
   transform: rotate(45deg);
   position: absolute;
-  top: 80px;
+  top:120px;
+  left: 130px;
 }
 
 .closeBtn span:nth-child(2) {

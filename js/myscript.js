@@ -19,3 +19,5 @@ $('.closeBtn').on("click", function(){
       opacity:"0"
    })
 })
+
+$()
