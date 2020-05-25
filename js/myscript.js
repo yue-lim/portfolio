@@ -12,9 +12,10 @@ $('#header .menu >li').on("click", function(){
 })
 
 $('.closeBtn').on("click", function(){
-   $(this).addClass("on")
-})
-
-$('.closeBtn').on("unclick", function(){
-   $(this).removeClass("on")
+   $(this).siblings().find('.submenu').css({
+      display:"none"
+   })
+   $(this).css({
+      opacity:"0"
+   })
 })

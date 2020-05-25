@@ -246,10 +246,7 @@ body {
   position: absolute;
   width: 25px;
   height: 17px;
-}
-
-.closeBtn a {
-  display: block;
+  transition: all 0.5s;
 }
 
 .closeBtn span {
@@ -261,15 +258,10 @@ body {
   transform: rotate(45deg);
   position: absolute;
   top: 80px;
-  left: 0;
 }
 
 .closeBtn span:nth-child(2) {
   transform: rotate(-45deg);
-}
-
-.closeBtn.on .submenu.on {
-  display: none;
 }
 
 /*slide 시작*/
