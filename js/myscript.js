@@ -20,4 +20,3 @@ $('.closeBtn').on("click", function(){
    })
 })
 
-$()

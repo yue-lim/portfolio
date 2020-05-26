@@ -169,13 +169,13 @@ body {
 .utils {
   float: right;
   width: 45%;
-  height: 118px;
+  height: 100px;
   text-align: right;
 }
 
 .utils li {
   display: inline-block;
-  margin: 30px 20px
+  margin: 20px 20px
 }
 
 .utils li a {
@@ -184,10 +184,6 @@ body {
   font-weight: bold;
   display: block;
   padding: 5px 2px
-}
-
-.menu {
-  float: left;
 }
 
 .menu >li {

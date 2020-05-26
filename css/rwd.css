@@ -41,11 +41,15 @@
       
       .utils li {
         display: inline-block;
-        margin: 30px 20px
+        margin: 20px 5px;
+      }
+
+      .utils li:last-child {
+        margin-right: 70px;
       }
       
       .utils li a {
-        font-size: 22px;
+        font-size: 20px;
         line-height: 20px;
         font-weight: bold;
         display: block;
@@ -64,9 +68,9 @@
       }
 
       .utils li:nth-child(1) a:after {
-          content: "\f590";
+          content: "\f007";
           font-family: 'Font Awesome 5 Free';
-          font-weight:900;
+          font-weight:400;
       }
 
       .utils li:nth-child(3) a:after {
@@ -75,29 +79,78 @@
         font-weight:900;
     }
       
-      .menu {
-        float: left;
-      }
+     .openMenu {
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 17px;
+      right: 0;
+      margin: 27px;
+    }
+
+    .openMenu span {
+      display: block;
+      background: #fff;
+      width: 22px;
+      height: 2px;
+      border-radius: 10px;
+      margin-bottom: 5px;
+    }
+
+    .openMenu span:last-child {
+      margin-bottom: 0;
+    }
+
+    .menu {
+      font-size: 1.2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45vw;
+      height: 100vh;
+      background: #fff;
+      color: #000;
+    }
+
+    .menu >li {
+      font-weight: bold;
+      position: relative;
+      top:100px;
+      left: 0px;
+      width: 100%;
+      margin-right: 0;
       
-      .menu >li {
-        font-weight: bold;
-        position: relative;
-        top:60px;
-        left:25px;
-        display: inline-block;
-        margin-right: 10px;
-      }
-      
-      .menu >li:hover {
-        background: #fff;
-        color: #000;
-      }
-      
-      .menu >li.on {
-        height: 25px;
-        background: #fff;
-        color: #000;
-      }
+    }
+    
+    .menu >li >a {
+      display: block;  
+      padding: 12px 5px 12px 20px;
+      margin-right: 40px;
+      position: relative;
+    }
+
+    .menu >li >a:after {
+      content: "\f078";
+      font-size: 15px;
+      line-height: 15px;
+      position: absolute;
+      top:50%;
+      right: -10px;
+      transform: translateY(-50%);
+      font-family: 'Font Awesome 5 Free';
+      font-weight:900;
+    }
+
+    .menu >li:hover {
+      background: #fff;
+      color: #000;
+    }
+    
+    .menu >li.on {
+      height: 25px;
+      background: #fff;
+      color: #000;
+    }
       
       .submenu {
         width: 40vw;
