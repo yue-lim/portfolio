@@ -187,6 +187,7 @@ body {
 }
 
 .menu >li {
+  font-size: 18px;
   font-weight: bold;
   position: relative;
   top:60px;
@@ -195,29 +196,23 @@ body {
   margin-right: 10px;
 }
 
-.menu >li:hover {
-  background: #fff;
-  color: #000;
-}
-
 .menu >li.on {
-  height: 25px;
   background: #fff;
   color: #000;
 }
 
 .submenu {
-  width: 40vw;
+  width: 40%;
   height: 100%;
-  background: #fff;
+  background: #000;
   display: none;
-  padding: 289px 200px;
-  font-size: 16px;
+  padding: 189px 200px;
+  font-size: 17px;
   line-height: 16px;
   position: fixed;
   top: 110px;
   left:0;
-  color: #000;
+  color: #fff;
 }
 
 .submenu >li {
@@ -233,6 +228,10 @@ body {
   padding-top: 20px;
 }
 
+.menu >li:nth-child(2) .submenu {
+  padding: 171px 200px;
+}
+
 /*클로즈버튼 시작*/
 
 .closeBtn {
@@ -242,6 +241,9 @@ body {
   width: 25px;
   height: 17px;
   transition: all 0.5s;
+  top:0;
+  right:0;
+  z-index:999999
 }
 
 .closeBtn span {
@@ -252,8 +254,8 @@ body {
   border-radius: 10px;
   transform: rotate(45deg);
   position: absolute;
-  top:120px;
-  left: 130px;
+  top:0px;
+  left: 0;
 }
 
 .closeBtn span:nth-child(2) {
