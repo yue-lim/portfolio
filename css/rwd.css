@@ -101,6 +101,15 @@
       margin-bottom: 0;
     }
 
+    .menu:after {
+      position: absolute;
+      top:0;
+      left: 0;
+      bottom: 0;
+      right:0;
+      
+    }
+
     .menu {
       display: none;
       width: 45%;
