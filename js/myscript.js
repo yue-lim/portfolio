@@ -15,8 +15,11 @@ $('#header .menu >li').on("mouseleave" , function(){
 })
 
 $(".openMenu").on("click", function(){
-   $(this).siblings(".menu").show()
+   $(this).parents(".header_nav").find(".closeBtn").show()
+   $(this).siblings(".menu").show().animate({width: "45%"}, 500, "easeInOutCubic")
 })
+
+
 
 
 
