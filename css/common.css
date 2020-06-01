@@ -78,7 +78,7 @@ a {
   background: #000;
   color: #fff;
   text-align: center;
-  z-index: 99999;
+  z-index: 999999;
 }
 
 .skipnav a:focus,
@@ -144,6 +144,7 @@ body {
   width: 100%;
   top:0;
   left: 0;
+  z-index: 1;
 }
 
 .header_nav {
@@ -260,9 +261,13 @@ body {
 
 .slide a {
   display: block;
+}
+
+.slide a span {
+  height: 520px;
+  display: block;
   text-indent: -99999px;
   overflow: hidden;
-  height: 520px;
   background: url(../img/hero_v9_01.jpg) no-repeat;
   background-size: cover;
 }
@@ -338,6 +343,22 @@ body {
 
 .test_imgBox a {
   display: block;
+}
+
+
+
+.priview1 {
+  width: 100%;
+  padding-top:56.25%;
+  position: relative;
+}
+
+.priview1 >div {
+  position: absolute;
+  top:0%;
+  left:0%;
+  bottom:0%;
+  right: 0%;
 }
 
 /*footer 시작*/

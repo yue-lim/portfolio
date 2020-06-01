@@ -17,7 +17,6 @@ $('.menu >li >span').on("click", function(){
    $(this).toggleClass("on")
    $(this).parent().find('.submenu').stop().slideToggle()
    $(this).parent().siblings().find('.submenu').slideUp()
-   
 })
 
 var winWidth 
