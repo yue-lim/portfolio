@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+/*S 6. 눌렀을 때 아웃라인 생기는 게 사라짐 */
+*:focus {
+  outline: none;
+}
+
 h1,
 h2,
 h3,
@@ -218,6 +223,7 @@ body {
   position: absolute;
   top: 27px;
   color: #ddd;
+  z-index: 2;
 }
 
 .submenu li {
@@ -250,13 +256,8 @@ body {
 
 /*slide 시작*/
 
-.slide {
-  width: 100%;
-  background: #e53a40;
-}
-
-.slide >div {
-  padding-top: 90px;
+.slide_box {
+  position: relative;
 }
 
 .slide a {
@@ -264,14 +265,103 @@ body {
 }
 
 .slide a span {
-  height: 520px;
   display: block;
   text-indent: -99999px;
   overflow: hidden;
-  background: url(../img/hero_v9_01.jpg) no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  height: 650px;
 }
 
+.slide1 a span {
+
+  background-image: url(../img/hero_v9_01.jpg);
+}
+
+.slide2 a span {
+
+  background-image: url(../img/hero_v9_02.jpg);
+}
+
+.slide3 a span {
+ 
+  background-image: url(../img/hero_v9_03.jpg);
+}
+
+.slide4 a span {
+
+  background-image: url(../img/hero_v9_04_2.jpg);
+}
+
+/* .slide2, 
+.slide3,
+.slide4 {
+  display: none;
+} */
+
+/*슬라이드 버튼 꾸미기*/
+.marrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 70px;
+  color: #fff;
+}
+
+.prevArrow {
+  left: 50px;
+  z-index: 1;
+}
+
+.nextArrow {
+  right: 50px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.slick-dots li {
+  display: inline-block;
+}
+
+.slick-dots li button {
+  background: #fff;
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 0 5px;
+  text-indent: -9999px;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.slick-dots li.slick-active button {
+  width: 40px;
+  border-radius: 50px;
+}
+
+.plpa {
+  font-size: 20px;
+  color: #fff;
+  background: none;
+  border: none;
+  position: absolute;
+  bottom: 18px;
+  right: 0;
+  width: 50%;
+  text-align: left;
+  padding-left: 80px;
+}
+
+
+/* 퀵로우바 */
 .quick_rowbar {
   background: #000;
   color: #fff;

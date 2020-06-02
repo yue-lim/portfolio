@@ -4,11 +4,9 @@
 
 //header menu 이벤트
 $('#header .menu >li >a').on("mouseover focus", function(){
-   if (winWidth > 1210) {
    $(this).parent().addClass("on")
    $(this).parent().siblings().removeClass("on")
    $(this).next().stop().show()
-   }
 })
 
 //1210이하 menu이벤트 
@@ -25,10 +23,8 @@ function wid() {
 }
 
 $('#header .menu >li').on("mouseleave" , function(){
-   if (winWidth > 1210) {
-      $(this).find('.submenu').stop().hide()
+   $(this).find('.submenu').stop().hide()
    $(this).removeClass("on")
-   }
 })
 
 //햄버거버튼 시작
@@ -41,6 +37,15 @@ $(".openMenu").on("click", function(){
 $('.closeBtn').on("click", function(){
    $(this).hide()
    $(this).parent().find('.menu').hide().animate({width:"0%"}, 500, "easeInOutCubic")
+})
+
+//slide 슬라이드 이동
+$('.slides').slick({
+   autoplay: true,
+   autoplaySpeed: 3000,
+   dots: true,
+   prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
+   nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
 })
 
 
