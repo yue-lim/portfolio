@@ -2,6 +2,11 @@
 // 껍데기 body영역 맨끝에 넣었으니까 굳이 없어도 됨
 // })
 
+var winWidth 
+function wid() {
+   winWidth = $(window).width()
+}
+
 //header menu 이벤트
 $('#header .menu >li >a').on("mouseover focus", function(){
    $(this).parent().addClass("on")
@@ -9,18 +14,13 @@ $('#header .menu >li >a').on("mouseover focus", function(){
    $(this).next().stop().show()
 })
 
-//1210이하 menu이벤트 
+//1210이하 submenu이벤트 
 $('.menu >li >span').on("click", function(){
    $(this).siblings().removeClass("on")
    $(this).toggleClass("on")
    $(this).parent().find('.submenu').stop().slideToggle()
    $(this).parent().siblings().find('.submenu').slideUp()
 })
-
-var winWidth 
-function wid() {
-   winWidth = $(window).width()
-}
 
 $('#header .menu >li').on("mouseleave" , function(){
    $(this).find('.submenu').stop().hide()
@@ -30,13 +30,13 @@ $('#header .menu >li').on("mouseleave" , function(){
 //햄버거버튼 시작
 $(".openMenu").on("click", function(){
    $(this).parents(".header_nav").find(".closeBtn").show()
-   $(this).siblings(".menu").show().animate({width: "45%"}, 500, "easeInOutCubic")
+   $(this).siblings(".menu").show().css({width:500, right:"0px"})
 })
 
 //클로즈버튼 시작
 $('.closeBtn').on("click", function(){
    $(this).hide()
-   $(this).parent().find('.menu').hide().animate({width:"0%"}, 500, "easeInOutCubic")
+   $(this).parent().find('.menu').hide().css({right:"-500px"})
 })
 
 //slide 슬라이드 이동
@@ -47,6 +47,29 @@ $('.slides').slick({
    prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
 })
+
+//plpa 버튼 변환 if문
+// $('.slide_box .plpa').on("click", function(){
+//    if($(this).find('i').hasClass('fa-pause')){
+//       $('.slides').slick('.slickPause')
+//       $(this).find('i').removeClass('fa-pause').addClass('fa-play')
+//    } else {
+//       $('.slides').slick('.slickPlay')
+//       $(this).find('i').removeClass('fa-play').addClass('fa-pause')
+//    }
+// })
+
+//plpa 버튼 toggle문
+$('.plpa').toggle(
+   function(){
+      $('.slides').slick('slickPause')
+      $(this).find("i").removeClass("fa-pause").addClass("fa-play")
+   },
+   function(){
+      $('.slides').slick('slickPlay')
+      $(this).find("i").removeClass("fa-play").addClass("fa-pause")
+   }
+) 
 
 
 

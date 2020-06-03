@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+:after,
+:before {
+  box-sizing: border-box;
+}
+
 /*S 6. 눌렀을 때 아웃라인 생기는 게 사라짐 */
 *:focus {
   outline: none;
@@ -195,7 +200,8 @@ body {
 .menu {
   position: relative;
   top: 60px;
-  left: 50px
+  left: 50px;
+  z-index:999999;
 }
 
 .menu >li {
@@ -274,7 +280,7 @@ body {
   overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 650px;
+  height: 700px;
   background-position: center;
 }
 
@@ -312,7 +318,7 @@ body {
   background: none;
   border: none;
   font-size: 70px;
-  color:rgba(255,255,255, 0.8)
+  color:rgba(255,255,255, 0.8);;
 }
 
 .prevArrow {
@@ -327,8 +333,8 @@ body {
 .slick-dots {
   position: absolute;
   bottom: 20px;
-  width: 100%;
-  text-align: center;
+  width: calc(50% + 30px);
+  text-align: right;
 }
 
 .slick-dots li {
@@ -353,16 +359,17 @@ body {
 }
 
 .plpa {
-  font-size: 20px;
-  color: #fff;
-  background: none;
+  font-size: 21px;
+  color: rgba(255,0,0, 0.5);
+  background: transparent;
   border: none;
   position: absolute;
-  bottom: 18px;
+  bottom: 17px;
   right: 0;
-  width: 50%;
+  width: calc(50% - 30px);
   text-align: left;
-  padding-left: 80px;
+  padding-left: 10px;
+  z-index: 1;
 }
 
 
@@ -429,15 +436,19 @@ body {
 
 .test_imgBox {
   border-radius: 30px;
-  width: 1020px;
-  height: 300px;
+  width: 95%;
+  height: 389px;
   overflow: hidden;
   box-shadow: 0px 0px 16px  #ddd;
-  margin: 0 50px;
+  margin: 0 auto;
 }
 
 .test_imgBox a {
   display: block;
+}
+
+.test_imgBox img {
+  width: 100%;
 }
 
 

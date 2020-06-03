@@ -14,13 +14,13 @@
       
       .header_nav {
         width: 100%;
-        margin: 0 auto;
+        margin: 10px auto;
         position: relative;
       }
       
       .logo {
         width: 121px;
-        margin-left: 1.8rem;
+        margin-left: 20px;
         float: left;
       }
       
@@ -36,7 +36,7 @@
       .utils {
         float: right;
         width: 45%;
-        height: auto;
+        height: 100px;
         text-align: right;
       }
       
@@ -80,6 +80,7 @@
         font-weight:900;
     }
       
+    /*햄버거버튼 시작*/
      .openMenu {
       display: block;
       position: absolute;
@@ -102,26 +103,21 @@
       margin-bottom: 0;
     }
 
-    .menu:after {
-      position: absolute;
-      top:0;
-      left: 0;
-      bottom: 0;
-      right:0;
-      
-    }
+    
 
+    /*메뉴 시작*/
     .menu {
-      display: none;
-      width: 0%;
-      height: 100vh;
+      display: block;
+      width: 250px;
+      height: 100%;
       position: fixed;
       top: 0;
       left: auto;
-      right:0;
+      right: -250px;
       background:#222;
       padding:100px 40px;
-      color: #ddd
+      color: #ddd;
+      z-index: 100000;
     }
     
     .menu >li {
