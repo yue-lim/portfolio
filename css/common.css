@@ -191,8 +191,6 @@ body {
 
 .utils {
   float: right;
-  /* width: 45%; */
-  /* height: 100px; */
   text-align: right;
 }
 
@@ -212,7 +210,7 @@ body {
 .menu {
   position: relative;
   top: 60px;
-  left: 50px;
+  right: 0px;
   z-index:999999;
 }
 
@@ -285,34 +283,8 @@ body {
   display: block;
 }
 
-.slide a span {
-  display: block;
-  text-indent: -99999px;
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 700px;
-  background-position: center;
-}
-
-.slide1 a span {
-
-  background-image: url(../img/hero_v9_01.jpg);
-}
-
-.slide2 a span {
-
-  background-image: url(../img/hero_v9_02.jpg);
-}
-
-.slide3 a span {
- 
-  background-image: url(../img/hero_v9_03.jpg);
-}
-
-.slide4 a span {
-
-  background-image: url(../img/hero_v9_04_2.jpg);
+.slide a img {
+  width: 100%;
 }
 
 /* .slide2, 
