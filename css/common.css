@@ -154,11 +154,23 @@ body {
   width: 100%;
   top:0;
   left: 0;
-  z-index: 1;
+  z-index: 9999;
+  transition: all 0.1s;
+}
+
+#header.red {
+  background: #fff;
+  color: #000;
+  position: fixed;
+  height: 110px;
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: 9999;
 }
 
 .header_nav {
-  width: 1210px;
+  max-width: 1210px;
   margin: 0 auto;
 }
 
@@ -179,8 +191,8 @@ body {
 
 .utils {
   float: right;
-  width: 45%;
-  height: 100px;
+  /* width: 45%; */
+  /* height: 100px; */
   text-align: right;
 }
 
@@ -223,11 +235,12 @@ body {
 
 .submenu {
   width: 220px;
-  padding:20px 0;
+  padding:22px 0;
   display: none;
   font-size: 16px;
   position: absolute;
   top: 27px;
+  left: -10px;
   color: #ddd;
   z-index: 2;
 }
@@ -263,9 +276,7 @@ body {
 }
 
 
-
 /*slide 시작*/
-
 .slide_box {
   position: relative;
 }
@@ -396,25 +407,37 @@ body {
   text-align: center;
 }
 
+/*이너 시작*/
+.inner_column {
+ margin: 130px auto;
+ /* border: 1px solid #000; */
+}
+
+.col1 {
+  margin-top: 50px;
+}
+
 .inner_column h3 {
-  padding: 50px 0 35px;
+  margin-bottom: 25px;
   font-size: 25px;
   font-weight: bold;
   letter-spacing: -1px;
-  text-indent: 14px;
-}
-
-.pop_list_box {
-  padding-bottom: 100px;
 }
 
 .pop_list li{
   float: left;
   width: 30%;
-  margin-left: 3%;
+  margin-left: 2%;
+  margin-right: 1%;
   box-shadow: 0px 0px 16px  #ddd;
   height: 287px;
-  margin-bottom: 22px;
+  margin-bottom: 40px;
+}
+
+.pop_list li:nth-child(4),
+.pop_list li:nth-child(5),
+.pop_list li:nth-child(6) {
+  margin-bottom: 0;
 }
 
 .pop_list img {
@@ -434,10 +457,32 @@ body {
   color: #e84242;
 }
 
+/*노베이스 테스트 시작*/
+
+.col2 {
+  position: relative;
+}
+
+.col2 .nobaseH {
+  position: absolute;
+  top: 18px;
+  left: 27px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 0 10px;
+  z-index: 1;
+}
+
+.col2 .nobaseH h3 {
+  font-weight: normal;
+  color: #fff;
+  position: relative;
+  top: 10px;
+}
+
 .test_imgBox {
   border-radius: 30px;
-  width: 95%;
-  height: 389px;
+  width: 98%;
   overflow: hidden;
   box-shadow: 0px 0px 16px  #ddd;
   margin: 0 auto;
@@ -451,20 +496,72 @@ body {
   width: 100%;
 }
 
-
-
-.priview1 {
+.col2 .slick-dots {
+  position: absolute;
+  bottom: 20px;
   width: 100%;
-  padding-top:56.25%;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.col2 .slick-dots li {
+  display: inline-block;
+}
+
+.col2 .slick-dots li button {
+  background: rgba(0,0,0, 0.3);
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 5px;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/*강의 미리보기 슬릭 시작*/
+
+.priv {
+  padding: 20px 50px;
   position: relative;
 }
 
-.priview1 >div {
+.priv img {
+  width: 100%;
+  padding:0 5px;
+}
+
+.priv .marrow {
   position: absolute;
-  top:0%;
-  left:0%;
-  bottom:0%;
-  right: 0%;
+  top:50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  font-size: 70px;
+  color:#999;
+}
+
+.priv .prevArrow {
+  left: -40px;
+  z-index: 1;
+}
+
+.priv .nextArrow {
+  right: -40px;
+}
+
+.priv .slick-slide {
+  opacity: 0.6;
+  transform: scale(0.89);
+  transition: all 0.5s;
+}
+
+.priv .slick-slide.slick-active {
+  opacity: 1;
+}
+
+.priv .slick-slide.slick-active.slick-current {
+  transform: scale(1);
 }
 
 /*footer 시작*/

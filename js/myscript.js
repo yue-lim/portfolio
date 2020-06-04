@@ -7,6 +7,17 @@ function wid() {
    winWidth = $(window).width()
 }
 
+$(window).scroll(function(){
+   var sct = $(this).scrollTop();
+   if (sct > 40) {
+      $('#header').addClass('red')
+      $('.logo a img').attr("src", "img/logo.png")
+   } else {
+      $('#header').removeClass('red')
+      $('.logo a img').attr("src", "img/logo_white.png")
+   }
+})
+
 //header menu 이벤트
 $('#header .menu >li >a').on("mouseover focus", function(){
    $(this).parent().addClass("on")
@@ -70,6 +81,37 @@ $('.plpa').toggle(
       $(this).find("i").removeClass("fa-play").addClass("fa-pause")
    }
 ) 
+
+//노베이스 테스트 슬릭 시작
+$('.col2 .test_imgBox').slick({
+   autoplay:true,
+   autoplaySpeed: 3000,
+   dots: true,
+   draggable: true,
+   arrows: false
+})
+
+
+//강의 미리보기 슬릭 시작
+$('.priv .priviewBox').slick({
+   autoplay: true, 
+   autoplaySpeed: 3000, 
+   dots: false, 
+   speed: 600, 
+   centerMode: true,
+   centerPadding:'200px', 
+   slidesToShow: 1, 
+   slidesToScroll:1, 
+   pauseOnHover: true, 
+   pauseOnDotsHover: true, 
+   pauseOnFocus: false, 
+   cssEase: 'linear', 
+   draggable: true, 
+   fade: false, 
+   arrows: true, 
+   prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
+   nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
+})
 
 
 
