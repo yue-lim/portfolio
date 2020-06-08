@@ -162,11 +162,12 @@ body {
   background: #fff;
   color: #000;
   position: fixed;
-  height: 110px;
+  height: 100px;
   width: 100%;
   top:0;
   left: 0;
   z-index: 9999;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
 }
 
 .header_nav {
@@ -196,19 +197,19 @@ body {
 
 .utils li {
   display: inline-block;
-  margin: 20px 20px
+  margin: 20px
 }
 
 .utils li a {
-  font-size: 20px;
-  line-height: 50px;
-  font-weight: bold;
   display: block;
-  padding: 5px 2px
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 2px;
 }
 
 .menu {
   position: relative;
+  width: 70%;
   top: 60px;
   right: 0px;
   z-index:999999;
@@ -406,7 +407,7 @@ body {
 }
 
 .inner_column:nth-child(5) h3 span {
-  width: 150px;
+  width: 145px;
 }
 
 /*인기강좌 시작*/
