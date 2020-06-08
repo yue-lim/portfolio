@@ -443,6 +443,25 @@ body {
   color: #e84242;
 }
 
+.pop_list li a .imgbox {
+  position: relative;
+}
+
+.pop_list li a .imgbox:after {
+  content: ""; 
+  position: absolute;
+  top:0; 
+  left:0; 
+  bottom:0; 
+  right:0;
+  background: rgba(0,0,0,0);
+  transition: all 0.5s;
+}
+
+.pop_list li a  .imgbox:hover:after {
+  background: rgba(0,0,0,0.3);
+}
+
 /*노베이스 테스트 시작*/
 
 .col2 {
@@ -463,7 +482,7 @@ body {
   font-weight: normal;
   color: #fff;
   position: relative;
-  top: 10px;
+  top: 15px;
 }
 
 .test_imgBox {
