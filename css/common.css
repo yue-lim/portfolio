@@ -536,6 +536,7 @@ body {
 .priv img {
   width: 100%;
   padding:0 5px;
+  cursor: pointer;
 }
 
 .priv .marrow {
@@ -569,6 +570,43 @@ body {
 
 .priv .slick-slide.slick-active.slick-current {
   transform: scale(1);
+}
+
+.popupBox {
+  display: none;
+}
+
+.popupBox.on {
+  display: block;
+  position:absolute;
+  top:0;
+  left: 0;
+  bottom:0;
+  right: 0;
+  background:rgba(0, 0, 0, 0.3)
+}
+
+.popupBox.on .playbox {
+  position: relative;
+  width:100%;
+  padding-top: 56.25%;
+}
+
+.popupBox.on .play {
+ position: absolute;
+ top:30%;
+ left: 30%;
+ bottom: 30%;
+ right: 30%;
+}
+
+.popupBox.on button {
+  border: none;
+  background: none;
+  font-size: 50px;
+  position: absolute;
+  top:0;
+  right: 0;
 }
 
 /*footer 시작*/

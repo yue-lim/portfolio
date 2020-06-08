@@ -113,6 +113,12 @@ $('.priv .priviewBox').slick({
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
 })
 
+$('col3 .priviewBox img').on("click", function(e){
+   e.preventDefault();
+   $('.popupBox').addClass('on')
+   $('.popupBox .playbox iframe').attr("src",  $(this).attr('data-src'))
+
+})
 
 
 
