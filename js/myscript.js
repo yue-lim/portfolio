@@ -2,10 +2,7 @@
 // 껍데기 body영역 맨끝에 넣었으니까 굳이 없어도 됨
 // })
 
-var winWidth 
-function wid() {
-   winWidth = $(window).width()
-}
+var winWidth = $(window).width()
 
 $(window).scroll(function(){
    var sct = $(this).scrollTop();
@@ -83,19 +80,30 @@ $('.plpa').toggle(
 ) 
 
 //노베이스 테스트 슬릭 시작
-$('.col2 .test_imgBox').slick({
-   autoplay:true,
-   autoplaySpeed: 3000,
-   dots: true,
-   draggable: true,
-   arrows: false
+$(window).resize(function(){
+   var winWidth = $(this).width()
+   if (winWidth > 799) {
+   // $('html').addClass('moblie')
+   $('.col2 .test_imgBox').addClass('on')
+   $('.col2 .test_imgBox.on').slick({
+      autoplay:true,
+      autoplaySpeed: 3000,
+      dots: true,
+      draggable: true,
+      arrows: false,
+      fade: true,
+      speed:800,
+   })
+} else {$('.col2 .test_imgBox').removeClass('on')}
 })
 
 
-//강의 미리보기 슬릭 시작
+
+
+//강의 맛보기 슬릭 시작
 $('.priv .priviewBox').slick({
    autoplay: true, 
-   autoplaySpeed: 3000, 
+   autoplaySpeed: 2000, 
    dots: false, 
    speed: 600, 
    centerMode: true,
@@ -113,12 +121,31 @@ $('.priv .priviewBox').slick({
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
 })
 
-$('col3 .priviewBox img').on("click", function(){
+$('.priviewBox img').on("click", function(){
    $('.popupBox').addClass('on')
    $('.popupBox .playbox iframe').attr("src",  $(this).attr('data-src'))
-
+   var col3top = $('.col3').offset().top
+   $('.playbox').css({
+      top: col3top-280
+   })
 })
 
+$('.popupBox button').on("click", function(){
+   $('.popupBox').removeClass('on')
+   //유투브동영상은 꺼도 소리가 나오니까 src주소도 벗겨줘야함!!
+   $('.popupBox .playbox iframe').attr("src", "")
+})
+
+$('.rev .reviewBox').slick({
+   autoplay: false,
+   dots: false,
+   draggable: true,
+   arrows: false,
+   centerMode: true,
+   centerPadding:'0px', 
+   slidesToShow: 3, 
+   slidesToScroll:1
+})
 
 
 

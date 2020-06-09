@@ -19,7 +19,7 @@
         <script src="js/slick.min.js"></script>
 </head>
 <body>
-    <div class="wrap">
+    <div id="wrap">
 
         <div class="skipnav"><a href="#container">본문 바로가기</a></div>
 
@@ -221,7 +221,7 @@
                         </li>
                     </ul>
                 </div>
-        </div>
+           </div>
             <div class="inner_column col2 row">
                     <div class="nobaseH"><h3>노베이스 테스트</h3></div>
                     <div class="test_imgBox">
@@ -231,34 +231,46 @@
                     </div>
             </div>
             <div class="inner_column col3 row">
-                    <h3>강의 미리보기<br>
+                    <h3>강의 맛보기<br>
                         <span></span>
                     </h3>
                     <div class="priv">
                         <div class="priviewBox">
-                            <div class="priview"><img data-src='https://www.youtube.com/embed/9yywe4YKpqE?mute=1&amp;autoplay=1&amp;rel=0' src="img/main_course_01.jpg" alt=""></div>
-                            <div class="priview"><img src="img/main_course_02.jpg" alt=""></div>
-                            <div class="priview"><img src="img/main_course_03.jpg" alt=""></div>
-                            <div class="priview"><img src="img/main_course_04.jpg" alt=""></div>
+                            <div class="priview"><img data-src='https://www.youtube.com/embed/9yywe4YKpqE' src="img/main_course_01.jpg" alt=""></div>
+                            <div class="priview"><img data-src='https://www.youtube.com/embed/LZAlG57ohH0'  src="img/main_course_02.jpg" alt=""></div>
+                            <div class="priview"><img data-src='https://www.youtube.com/embed/csJcDxXZvR0'  src="img/main_course_03.jpg" alt=""></div>
+                            <div class="priview"><img data-src='https://www.youtube.com/embed/yA2f0hqbbz0'  src="img/main_course_04.jpg" alt=""></div>
                         </div>
                     </div>
-                    
-                   
-
             </div>
-         
-
-        </div>
-   <div class="popupBox on">
+            <div class="revbg">
+                <div class="inner_column col4 row">
+                    <h3>실시간 후기<br>
+                        <span></span>
+                    </h3>
+                    <div class="rev">
+                        <div class="reviewBox">
+                            <div class="review"><img src="img/recent_report01.jpg" alt=""></div>
+                            <div class="review"><img src="img/recent_report02.jpg" alt=""></div>
+                            <div class="review"><img src="img/recent_report03.jpg" alt=""></div>
+                            <div class="review"><img src="img/recent_report04.jpg" alt=""></div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+            
+    
+   <div class="popupBox">
                 <div class="playbox">
-                    <div class="play"><iframe width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-                    <button>
-                        <span class="blind">닫기</span>
-                        <i class="fas fa-times"></i>
-                    </button>
+                    <div class="play">
+                        <iframe width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <button>
+                            <span class="blind">닫기</span>
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    
                 </div>
-                
-                
   </div>
 
 <footer>
@@ -321,7 +333,8 @@
         <p>COPYRIGHT © GONGSIN</p>
     </div>
 
-</footer>
+ </footer>
+</div>
 <script src="js/myscript.js"></script>
 </body>
 </html>

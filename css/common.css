@@ -369,14 +369,13 @@ body {
 }
 
 .qc_column {
-  display: inline-block;
-  margin-left: 120px;
+  float: left;
+  width: 25%;
 }
 
 .qc_column a {
   display: block;
   padding: 20px 0;
-  margin-left: 20px;
   text-align: center;
 }
 
@@ -406,8 +405,12 @@ body {
   margin-left: 5px;
 }
 
-.inner_column:nth-child(5) h3 span {
-  width: 145px;
+.col3 h3 span {
+  width: 120px;
+}
+
+.col4 h3 span {
+  width: 120px;
 }
 
 /*인기강좌 시작*/
@@ -526,7 +529,7 @@ body {
   overflow: hidden;
 }
 
-/*강의 미리보기 슬릭 시작*/
+/*강의 맛보기 슬릭 시작*/
 
 .priv {
   padding: 20px 50px;
@@ -580,15 +583,18 @@ body {
 .popupBox.on {
   display: block;
   position:absolute;
-  top:0;
-  left: 0;
-  bottom:0;
-  right: 0;
-  background:rgba(0, 0, 0, 0.3)
+  top:0%;
+  left: 0%;
+  bottom:0%;
+  right: 0%;
+  background:rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
 
 .popupBox.on .playbox {
-  position: relative;
+  position: absolute;
+  top:0;
+  left:0;
   width:100%;
   padding-top: 56.25%;
 }
@@ -606,8 +612,29 @@ body {
   background: none;
   font-size: 50px;
   position: absolute;
-  top:0;
-  right: 0;
+  top:-30px;
+  right: -50px;
+  color: #fff;
+}
+
+/*실시간 후기 시작*/
+
+.revbg {
+  background: #e8e8e8;
+}
+
+.col4 {
+  padding: 50px 0;
+}
+
+.rev {
+  padding: 0px 30px;
+}
+
+.reviewBox img {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
 }
 
 /*footer 시작*/
