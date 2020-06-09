@@ -572,6 +572,7 @@ body {
   transform: scale(1);
 }
 
+/*팝업박스 동영상 시작*/
 .popupBox {
   display: none;
 }
