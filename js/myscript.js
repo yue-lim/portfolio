@@ -23,7 +23,10 @@ $('#header .menu >li >a').on("mouseover focus", function(){
 })
 
 //1210이하 submenu이벤트 
-$('.menu >li >span').on("click", function(){
+$(window).resize(function(){
+   var winWidth = $(this).width()
+   if (winWidth <= 1210) {
+   $('.menu >li >span').on("click", function(){
    $(this).siblings().removeClass("on")
    $(this).toggleClass("on")
    $(this).parent().find('.submenu').stop().slideToggle()
@@ -34,8 +37,7 @@ $('#header .menu >li').on("mouseleave" , function(){
    $(this).find('.submenu').stop().hide()
    $(this).removeClass("on")
 })
-
-//햄버거버튼 시작
+   //햄버거버튼 시작
 $(".openMenu").on("click", function(){
    $(this).parents(".header_nav").find(".closeBtn").show()
    $(this).siblings(".menu").show().css({width:500, right:"0px"})
@@ -46,6 +48,11 @@ $('.closeBtn').on("click", function(){
    $(this).hide()
    $(this).parent().find('.menu').hide().css({right:"-500px"})
 })
+   }
+})
+
+
+
 
 //slide 슬라이드 이동
 $('.slides').slick({
@@ -83,9 +90,7 @@ $('.plpa').toggle(
 $(window).resize(function(){
    var winWidth = $(this).width()
    if (winWidth > 799) {
-   // $('html').addClass('moblie')
-   $('.col2 .test_imgBox').addClass('on')
-   $('.col2 .test_imgBox.on').slick({
+   $('.col2 .test_imgBox').slick({
       autoplay:true,
       autoplaySpeed: 3000,
       dots: true,
@@ -94,9 +99,10 @@ $(window).resize(function(){
       fade: true,
       speed:800,
    })
-} else {$('.col2 .test_imgBox').removeClass('on')}
+} else {//슬릭이벤트 해제는 unslick!
+   $('.col2 .test_imgBox').slick('unslick')
+}
 })
-
 
 
 
