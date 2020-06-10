@@ -389,6 +389,15 @@ body {
   margin-top: 50px;
 }
 
+.col3 {
+  margin-bottom: 60px ;
+}
+
+.col4 {
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
 .inner_column h3 {
   font-size: 25px;
   font-weight: bold;
@@ -637,10 +646,17 @@ body {
   cursor: pointer;
 }
 
+/*introduce 시작*/
+
+.introduce img {
+  width: 100%;
+}
+
+
 /*footer 시작*/
 footer {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .footer_area >div {

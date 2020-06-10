@@ -23,10 +23,7 @@ $('#header .menu >li >a').on("mouseover focus", function(){
 })
 
 //1210이하 submenu이벤트 
-$(window).resize(function(){
-   var winWidth = $(this).width()
-   if (winWidth <= 1210) {
-   $('.menu >li >span').on("click", function(){
+$('.menu >li >span').on("click", function(){
    $(this).siblings().removeClass("on")
    $(this).toggleClass("on")
    $(this).parent().find('.submenu').stop().slideToggle()
@@ -37,7 +34,8 @@ $('#header .menu >li').on("mouseleave" , function(){
    $(this).find('.submenu').stop().hide()
    $(this).removeClass("on")
 })
-   //햄버거버튼 시작
+
+//햄버거버튼 시작
 $(".openMenu").on("click", function(){
    $(this).parents(".header_nav").find(".closeBtn").show()
    $(this).siblings(".menu").show().css({width:500, right:"0px"})
@@ -48,10 +46,6 @@ $('.closeBtn').on("click", function(){
    $(this).hide()
    $(this).parent().find('.menu').hide().css({right:"-500px"})
 })
-   }
-})
-
-
 
 
 //slide 슬라이드 이동
@@ -87,17 +81,19 @@ $('.plpa').toggle(
 ) 
 
 //노베이스 테스트 슬릭 시작
+//load했을 때 사이즈 측정한다음 함수부르고
 $(window).load(function(){
    winWidth = $(this).width()
    winResize()
 })
 
-
+//resize했을 때도 사이즈 측정한다음 함수부름
 $(window).resize(function(){
    winWidth = $(this).width()
    winResize()
- 
 })
+
+//함수 이름 정한다음에 함수선언!
 function winResize(){
     if (winWidth > 799) {
    $('.col2 .test_imgBox').slick({
@@ -123,7 +119,7 @@ $('.priv .priviewBox').slick({
    dots: false, 
    speed: 600, 
    centerMode: true,
-   centerPadding:'200px', 
+   centerPadding:'50px', 
    slidesToShow: 1, 
    slidesToScroll:1, 
    pauseOnHover: true, 
