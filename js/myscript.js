@@ -2,7 +2,7 @@
 // 껍데기 body영역 맨끝에 넣었으니까 굳이 없어도 됨
 // })
 
-var winWidth = $(window).width()
+var winWidth;
 
 $(window).scroll(function(){
    var sct = $(this).scrollTop();
@@ -87,9 +87,19 @@ $('.plpa').toggle(
 ) 
 
 //노베이스 테스트 슬릭 시작
+$(window).load(function(){
+   winWidth = $(this).width()
+   winResize()
+})
+
+
 $(window).resize(function(){
-   var winWidth = $(this).width()
-   if (winWidth > 799) {
+   winWidth = $(this).width()
+   winResize()
+ 
+})
+function winResize(){
+    if (winWidth > 799) {
    $('.col2 .test_imgBox').slick({
       autoplay:true,
       autoplaySpeed: 3000,
@@ -102,7 +112,7 @@ $(window).resize(function(){
 } else {//슬릭이벤트 해제는 unslick!
    $('.col2 .test_imgBox').slick('unslick')
 }
-})
+}
 
 
 
