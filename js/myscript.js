@@ -92,14 +92,16 @@ $('.plpa').toggle(
 $(window).load(function(){
    winWidth = $(this).width()
    winResize();
-   quickbarR()
+   quickbarR();
+   introR()
 })
 
 //resize했을 때도 사이즈 측정한다음 함수부름
 $(window).resize(function(){
    winWidth = $(this).width()
    winResize();
-   quickbarR()
+   quickbarR();
+   introR()
 })
 
 //노베이스 슬릭해제 함수 이름 정한다음에 함수선언!
@@ -119,6 +121,7 @@ function winResize(){
 }
 }
 
+//퀵바 row클래스 제어함수
 function quickbarR() {
    if (winWidth < 799) {
       $('.quick_class').removeClass('row')
@@ -127,6 +130,17 @@ function quickbarR() {
    }
 }
 
+function introR() {
+   if (winWidth < 799) {
+      $('.introduce a img').attr({
+         src: 'img/introduce_resize.jpg'
+      })
+   } else {
+      $('.introduce a img').attr({
+         src: 'img/introduce.jpg'
+      })
+   }
+}
 
 
 //강의 맛보기 슬릭 시작
@@ -155,6 +169,7 @@ $('.priv .priviewBox').slick({
               centerPadding: "0px",
               slidesToShow: 1, 
               slidesToScroll:1,
+              arrows: false,
       }
 }],
 })

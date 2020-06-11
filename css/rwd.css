@@ -243,7 +243,11 @@
     max-width: 320px;
   }
 
-  
+/*슬라이드 일시정지 이미지없애기*/
+.plpa {
+  display: none;
+}
+
 
 /* 퀵로우바 */
 .quick_rowbar {
@@ -383,6 +387,13 @@
 
 .pop_list li a  .imgbox:hover:after {
   background: rgba(0,0,0,0.3);
+}
+
+
+/*강의 맛보기 슬릭 시작*/
+.priv {
+  padding: 20px 0px;
+  position: relative;
 }
 
 
