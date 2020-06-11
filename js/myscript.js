@@ -55,6 +55,13 @@ $('.slides').slick({
    dots: true,
    prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
+   responsive: [{
+      breakpoint : 800,
+      settings : {
+         dots: false,
+         arrows: false
+      }
+   }]
 })
 
 //plpa 버튼 변환 if문
@@ -84,16 +91,18 @@ $('.plpa').toggle(
 //load했을 때 사이즈 측정한다음 함수부르고
 $(window).load(function(){
    winWidth = $(this).width()
-   winResize()
+   winResize();
+   quickbarR()
 })
 
 //resize했을 때도 사이즈 측정한다음 함수부름
 $(window).resize(function(){
    winWidth = $(this).width()
-   winResize()
+   winResize();
+   quickbarR()
 })
 
-//함수 이름 정한다음에 함수선언!
+//노베이스 슬릭해제 함수 이름 정한다음에 함수선언!
 function winResize(){
     if (winWidth > 799) {
    $('.col2 .test_imgBox').slick({
@@ -110,6 +119,14 @@ function winResize(){
 }
 }
 
+function quickbarR() {
+   if (winWidth < 799) {
+      $('.quick_class').removeClass('row')
+   } else {
+      $('.quick_class').addClass('row')
+   }
+}
+
 
 
 //강의 맛보기 슬릭 시작
@@ -119,7 +136,7 @@ $('.priv .priviewBox').slick({
    dots: false, 
    speed: 600, 
    centerMode: true,
-   centerPadding:'50px', 
+   centerPadding:'100px', 
    slidesToShow: 1, 
    slidesToScroll:1, 
    pauseOnHover: true, 
@@ -131,6 +148,15 @@ $('.priv .priviewBox').slick({
    arrows: true, 
    prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
    nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
+   responsive: [{
+      breakpoint: 800,
+      settings: { 
+              centerMode: false,
+              centerPadding: "0px",
+              slidesToShow: 1, 
+              slidesToScroll:1,
+      }
+}],
 })
 
 $('.priviewBox img').on("click", function(){
@@ -153,11 +179,17 @@ $('.rev .reviewBox').slick({
    dots: false,
    draggable: true,
    arrows: false,
-   centerMode: true,
-   centerPadding:'0px', 
    slidesToShow: 3, 
-   slidesToScroll:1
+   slidesToScroll:1,
+   responsive: [{
+      breakpoint:800,
+      settings: {
+         slidesToShow: 1,
+         autoplay: true
+      }
+   }]
 })
+
 
 
 

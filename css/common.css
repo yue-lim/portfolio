@@ -539,9 +539,8 @@ body {
 }
 
 /*강의 맛보기 슬릭 시작*/
-
 .priv {
-  padding: 20px 50px;
+  padding: 20px 100px;
   position: relative;
 }
 
@@ -562,12 +561,12 @@ body {
 }
 
 .priv .prevArrow {
-  left: -40px;
+  left: -50px;
   z-index: 1;
 }
 
 .priv .nextArrow {
-  right: -40px;
+  right: -50px;
 }
 
 .priv .slick-slide {
